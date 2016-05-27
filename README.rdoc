@@ -7,5 +7,9 @@ Installation de la GEM qrcode.
 
 bundle install et rails s pour vérifier que l'application tourne sur localhost:3000
 
-création du controller pages
+création du controlleur "pages" avec méthode "index" et mise en place de la vue
+"rails g controller pages index"
+
+création de la page "about"
+
 
