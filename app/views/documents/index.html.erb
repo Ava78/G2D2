@@ -1,0 +1,14 @@
+<h1>Les Documents de la base de données</h1>
+
+<% for document in @documents %>
+	<article>
+		<h2><%= document.title%></h2>
+		<p><%= document.description%></p>
+
+	</article>
+
+	<hr> <!-- pour séparer les lignes -->
+
+
+	
+<% end %>

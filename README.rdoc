@@ -1,21 +1,29 @@
-Application Génération de code 2D.
-Dans le cadre de la GED. 
+Ici, application de TEST. 
 
 Tout d'abord, installation de RUBY, de RVM et de Rails.
 
-Installation de la GEM qrcode.
+-Installation de la GEM qrcode.
 
-bundle install et rails s pour vérifier que l'application tourne sur localhost:3000
+-bundle install et rails s pour vérifier que l'application tourne sur localhost:3000
 
-création du controlleur "pages" avec méthode "index" et mise en place de la vue
+-création du controlleur "pages" avec méthode "index" et mise en place de la vue
 "rails g controller pages index"
 
-création de la page "about"
+-création de la page "about"
 
-création de la table "Document" avec rails g model document title:string description:text
+-création de la table "Document" avec rails g model document title:string description:text
 
-installation de SqliteBrowser pour rendre graphique la base de données.
-- pas besoin d'une gem, il suffit d'ouvrir le dossier du projet et de cliquer sur developpement.sqlite3
+-installation de SqliteBrowser pour rendre graphique la base de données.
+*pas besoin d'une gem, il suffit d'ouvrir le dossier du projet et de cliquer sur developpement.sqlite3
+
+-Ajout d'un slug dans la table Document grace à rails g migration AddSlugToDocument
+
+- création des documents dans la RAILS CONSOLE
+Document.create(title: "Bulletin Adhésion", description: "Bulletin pour adhésion", slug: "BA")
+
+- Création de la page pour afficher les cours : page Documents
+config/routes get 'documents' => 'documents#index'
+
 
 
 
