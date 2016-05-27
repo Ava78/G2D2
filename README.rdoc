@@ -1,0 +1,44 @@
+Application Génération de code 2D.
+Dans le cadre de la GED. 
+
+Tout d'abord, installation de RUBY, de RVM et de Rails.
+
+Installation de la GEM qrcode.
+
+bundle install et rails s pour vérifier que l'application tourne sur localhost:3000
+
+création de la route root application/welcome avec controlleur application et méthode welcome pour mise en place de la page d'accueil
+
+création de la vue.
+
+
+
+
+
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
