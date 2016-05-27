@@ -15,7 +15,7 @@ création de la page "about"
 création de la table "Document" avec rails g model document title:string description:text
 
 installation de SqliteBrowser pour rendre graphique la base de données.
-==> pas besoin d'une gem, il suffit d'ouvrir le dossier du projet et de cliquer sur developpement.sqlite3
+- pas besoin d'une gem, il suffit d'ouvrir le dossier du projet et de cliquer sur developpement.sqlite3
 
 
 
