@@ -22,9 +22,23 @@ Tout d'abord, installation de RUBY, de RVM et de Rails.
 Document.create(title: "Bulletin Adhésion", description: "Bulletin pour adhésion", slug: "BA")
 
 - Création de la page pour afficher les cours : page Documents
-config/routes get 'documents' => 'documents#index'
+config les routes avec 
+get 'documents' => 'documents#index'
+
+- modif de la vue pour les documents
 
 
+- Pour administration du site il faut ajouter la gem ADMINISTRATE.
+Puis faire bundle 
+puis 'rails generate administrate:install'.
+Ensuite, ajout dans ctrleur admin d'une ligne "http_basic..." pour protéger l'url localhost:3000/admin et ne pas mettre le code en clair.
+Il faut installer de la gem dotenv-rails pour les environnements de variables (protection des codes admin)
+https://github.com/bkeepers/dotenv
 
+Puis création du fichier .env.development pour informer que nous l'utilisons sur un env de développement
+Nous copions dans ce fichier,  
+ADMIN_NAME=Ahmedalthani
+ADMIN_PASSWORD=supersecretpassword
+Si nécessaire modifier le nom d'admin et le mdp.
 
 
