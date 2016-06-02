@@ -7,8 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1>Liste des Documents disponibles</h1>
+
+
+<nav>
+	<ul>
+		
+		<li><a href="<%= root_path %>">Accueil</a></li>
+		<li><a href="<%= documents_path%>">Liste des Documents</a></li>
+		<li><a href="<%= about_path%>">About</a></li>
+
+
+	</ul>
+
+
+
+</nav>
+
 
 <%= yield %>
+
+
+<footer>
+	<p>Footer à déposer ici</p>
+</footer>
 
 </body>
 </html>

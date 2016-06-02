@@ -86,5 +86,12 @@ y insérer une image appelée missing.png.
 ---------------
 Modifions la vue de la page d'accueil : 
 view/index.html.erb.
+----------------
+Modification du LAYOUT (tout ce qui se répète sur les pages)
+layout/application.html.erb
+et modification des routes afin de sécuriser en cas de changement de noms des pages dans les balises li du layout.
+-----------------
+
+
 
 
