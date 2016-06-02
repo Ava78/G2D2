@@ -11,6 +11,7 @@ class DocumentDashboard < Administrate::BaseDashboard
     id: Field::Number,
     title: Field::String,
     description: Field::Text,
+    image: PaperclipField,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     slug: Field::String,
@@ -25,6 +26,7 @@ class DocumentDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :description,
+    :image,
     :created_at,
   ].freeze
 
@@ -34,6 +36,7 @@ class DocumentDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :description,
+    :image,
     :created_at,
     :updated_at,
     :slug,
@@ -45,6 +48,7 @@ class DocumentDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :title,
     :description,
+    :image,
     :slug,
   ].freeze
 

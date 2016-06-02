@@ -28,10 +28,13 @@ get 'documents' => 'documents#index'
 - modif de la vue pour les documents
 
 
-- Pour administration du site il faut ajouter la gem ADMINISTRATE.
+Pour administration du site il faut ajouter la gem ADMINISTRATE.
 Puis faire bundle 
 puis 'rails generate administrate:install'.
+
 Ensuite, ajout dans ctrleur admin d'une ligne "http_basic..." pour protéger l'url localhost:3000/admin et ne pas mettre le code en clair.
+https://github.com/thoughtbot/administrate/issues/286
+
 Il faut installer de la gem dotenv-rails pour les environnements de variables (protection des codes admin)
 https://github.com/bkeepers/dotenv
 
@@ -41,4 +44,33 @@ ADMIN_NAME=Ahmedalthani
 ADMIN_PASSWORD=supersecretpassword
 Si nécessaire modifier le nom d'admin et le mdp.
 
+Pour télécharger des fichiers : utiliser la GEM PAPERCLIP ou CARRIERWAVE.
+https://github.com/thoughtbot/paperclip
+il faut installer ImageMagick
+"sudo apt-get install imagemagick -y"
+
+dans config/env/dev.rb ajout de la ligne : 
+Paperclip.options[:command_path] = "/usr/bin/"
+
+Puis ajout dans model/document.rb des lignes : 
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "150x150>" }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+Puis il faut effectuer une migration pour dire à notre table "document" que nous ajoutons une image.
+et pour effectuer cela : faire la commande : rails generate paperclip document image (<= explication document c'est la table et image ce qui doit etre ajouté)
+(nous avons remplace le mot avatar par le mot image)
+puis rake db:migrate
+
+Pour uploader une image avec paperclip et administrate : cf page https://github.com/thoughtbot/administrate/issues/195
+
+il faut d'abord copier cette commande : 
+rails generate administrate:field paperclip
+
+Puis suivre ce qui est à mettre dans app/fields/paperclip-field.rb
+et dans les vues  app/views/fields/paperclip_field (form index et show)
+
+L'ajout de la ligne : "image: PaperclipField"
+se fait dans app/dashboard/document_dashboard.rb
+
+et dans la partie ATTRIBUTES_TYPES
 

@@ -22,6 +22,9 @@ gem 'administrate'
 # Pour protection de l'authentification
 gem 'dotenv-rails'
 
+#pour télécharger des fichiers
+gem 'paperclip'
+
 
 
 # Pour tests
