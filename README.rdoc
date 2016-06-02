@@ -78,5 +78,11 @@ Aussi, en cas d'image manquante, l'appli prévoit d'en pré-télécharger une.
 cf dans model/document.rb.
 avec la ligne defaul_url.... missing.png.
 
-ouvrir dans public
+ouvrir dans public un dossier image avec sous dossier medium et thumb. 
+y insérer une image appelée missing.png.
+
+---------------
+Modifions la vue de la page d'accueil : 
+view/index.html.erb.
+
 

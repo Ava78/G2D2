@@ -1,9 +1,12 @@
 <h1>Les Documents de la base de données (<%= @documents.count%>)</h1>
 <!--pour afficher le nombre de cours enregistrés -->
 
+
 <% for document in @documents %>
 	<article>
 		<h2><%= document.title%></h2>
+		<img src="<%=document.image.url(:thumb)%>" alt="<%=document.title %>">
+		<!-- pour ajout de l'image de type thumb-->
 		<p><%= document.description%></p>
 
 	</article>
