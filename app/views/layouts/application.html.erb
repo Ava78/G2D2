@@ -1,36 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>G2D2</title>
+  <title>Application de test avec Honoré</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>Liste des Documents disponibles</h1>
+	<h1> Liste des documents disponibles </h1>
 
+	<%= render 'layouts/partials/nav' %>
+	
 
-<nav>
-	<ul>
-		
-		<li><a href="<%= root_path %>">Accueil</a></li>
-		<li><a href="<%= documents_path%>">Liste des Documents</a></li>
-		<li><a href="<%= about_path%>">About</a></li>
+	<%= yield %>
 
+	<hr>
 
-	</ul>
+	<%= render 'layouts/partials/footer' %>
 
-
-
-</nav>
-
-
-<%= yield %>
-
-
-<footer>
-	<p>Footer à déposer ici</p>
-</footer>
+	<!-- Ce sont des partials, voir les fichiers concernés pour modifier le footer-->
 
 </body>
 </html>

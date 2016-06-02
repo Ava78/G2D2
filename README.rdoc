@@ -91,6 +91,11 @@ Modification du LAYOUT (tout ce qui se répète sur les pages)
 layout/application.html.erb
 et modification des routes afin de sécuriser en cas de changement de noms des pages dans les balises li du layout.
 -----------------
+Mise en Place des PARTIALS et HELPERS pour découpe propres. 
+cf dossier layout, créer un dossier partials
+et un fichier _nav.html.rb.
+Dans ce fichier y insérer ce qui concerne la nav bar
+
 
 
 
