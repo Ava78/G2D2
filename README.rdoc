@@ -72,5 +72,11 @@ et dans les vues  app/views/fields/paperclip_field (form index et show)
 L'ajout de la ligne : "image: PaperclipField"
 se fait dans app/dashboard/document_dashboard.rb
 
-et dans la partie ATTRIBUTES_TYPES
+et dans la partie ATTRIBUTES_TYPES ajouter la ligne "image"
+
+Aussi, en cas d'image manquante, l'appli prévoit d'en pré-télécharger une.
+cf dans model/document.rb.
+avec la ligne defaul_url.... missing.png.
+
+ouvrir dans public
 
