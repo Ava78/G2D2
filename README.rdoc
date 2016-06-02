@@ -95,7 +95,12 @@ Mise en Place des PARTIALS et HELPERS pour découpe propres.
 cf dossier layout, créer un dossier partials
 et un fichier _nav.html.rb.
 Dans ce fichier y insérer ce qui concerne la nav bar
-
+Idem pour le footer
+------------
+Chargement de bootstrap
+cf page http://getbootstrap.com/getting-started/#download
+prendre le code pour CSS a mettre dans layout/application.html.erb
+et le texte Javascript à mettre dans meme fichier en bas sous le footer.
 
 
 

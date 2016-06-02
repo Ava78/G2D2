@@ -5,8 +5,9 @@
 <% for document in @documents %>
 	<article>
 		<h2><%= document.title%></h2>
-		<img src="<%=document.image.url(:thumb)%>" alt="<%=document.title %>">
+		<%= image_tag document.image.url(:thumb), alt: document.title%>
 		<!-- pour ajout de l'image de type thumb-->
+		
 		<p><%= document.description%></p>
 
 	</article>
