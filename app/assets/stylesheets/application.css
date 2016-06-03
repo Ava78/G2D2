@@ -175,6 +175,6 @@
 /* Infos pour turbolinks - barre de chargement */
 
 html.turbolinks-progress-bar::before {
-    background-color: green !important;
-    height: 5px !important;
+    background-color: #FF456A !important;
+    height: 3px !important;
 }
