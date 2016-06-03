@@ -1,6 +1,7 @@
 <h1>Les Documents de la base de données (<%= @documents.count%>)</h1>
 <!--pour afficher le nombre de cours enregistrés -->
 
+<div class="jumbotron">
 
 <% for document in @documents %>
 	<article>
@@ -9,11 +10,10 @@
 		<!-- pour ajout de l'image de type thumb-->
 		
 		<p><%= document.description%></p>
-
 	</article>
 
 	<hr> <!-- pour séparer les lignes -->
 
-
-	
 <% end %>
+
+</div> <!-- conserver cette div pour entourer les docs de la class jumbotron -->
