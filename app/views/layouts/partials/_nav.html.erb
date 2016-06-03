@@ -3,11 +3,11 @@
 
 <nav class="menu">
 
-  <h1 class="name"><i class="fi-widget"></i>G2D2</a></h1>
+  <h1 class="name"><i class="fi-widget"></i>G2D2</a><%= link_to root_path%></h1>
 
   <ul class="inline-list">
-    <li><%= link_to "Home", root_path%></li>
-    <li class="active"><%= link_to "Historique", documents_path%></li>
+    <li><%= link_to "Historique", root_path%></li>
+    <li class="active"><%= link_to "Voir les documents", documents_path%></li>
     <li><%= link_to "About", about_path%></li>
   </ul>
 
