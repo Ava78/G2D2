@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  env: MyString
+  domaine: MyString
+  categorie_metier: MyString
+  type_doc: MyString
+  client: MyString
+  statut_client: MyString
+
+two:
+  env: MyString
+  domaine: MyString
+  categorie_metier: MyString
+  type_doc: MyString
+  client: MyString
+  statut_client: MyString
