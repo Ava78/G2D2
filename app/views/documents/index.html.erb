@@ -1,16 +1,16 @@
-<h1>Les Documents de la base de données (<%= @documents.count%>)</h1>
+<h1>Codes précédemment générés (<%= @documents.count%>)</h1>
 <!--pour afficher le nombre de cours enregistrés -->
 
 <div class="jumbotron">
 	<div class="row">
 	<% for document in @documents %>
-		<div class="col-sm-6 col-md-4">
+		<div class="col-sm-4 col-md-3">
     		<div class="thumbnail">
     		  <%= image_tag document.image.url(:medium), alt: document.title%>
     			<div class="caption">
     			    <h3><%= document.title%></h3>
     			    <p><%= document.description%></p>
-    			    <p><a href="#" class="btn btn-primary" role="button">Description</a> <a href="#" class="btn btn-default" role="button">Visualisation</a></p>
+    			    <p><a href="#" class="btn btn-default" role="button">Visualiser</a></p>
     			</div>
     		</div>
   		</div>
