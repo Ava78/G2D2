@@ -26,7 +26,6 @@ gem 'dotenv-rails'
 gem 'paperclip'
 
 
-
 # Pour tests
 gem 'pry'
 
