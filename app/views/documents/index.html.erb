@@ -2,18 +2,19 @@
 <!--pour afficher le nombre de cours enregistrés -->
 
 <div class="jumbotron">
-
-<% for document in @documents %>
-	<article>
-		<h2><%= document.title%></h2>
-		<%= image_tag document.image.url(:thumb), alt: document.title%>
-		<!-- pour ajout de l'image de type thumb-->
-		
-		<p><%= document.description%></p>
-	</article>
-
-	<hr> <!-- pour séparer les lignes -->
-
+	<div class="row">
+	<% for document in @documents %>
+		<div class="col-sm-6 col-md-4">
+    		<div class="thumbnail">
+    		  <%= image_tag document.image.url(:thumb), alt: document.title%>
+    			<div class="caption">
+    			    <h3><%= document.title%></h3>
+    			    <p><%= document.description%></p>
+    			    <p><a href="#" class="btn btn-primary" role="button">Description</a> <a href="#" class="btn btn-default" role="button">Visualisation</a></p>
+    			</div>
+    		</div>
+  		</div>
+	
 <% end %>
-
+	</div>
 </div> <!-- conserver cette div pour entourer les docs de la class jumbotron -->
