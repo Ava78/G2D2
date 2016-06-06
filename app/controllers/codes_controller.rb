@@ -2,13 +2,12 @@ class CodesController < ApplicationController
  require 'rqrcode'
 
   def index
-    @codes = Code.all
-    @qr = RQRCode::QRCode.new( 'https://github.com/whomwah/rqrcode', :size => 4, :level => :h )
+    @codes = Code.all    
   end
 
-  def create
-
+  def new
   end
+
 
   def show
   end

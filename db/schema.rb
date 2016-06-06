@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160606144725) do
+ActiveRecord::Schema.define(version: 20160606155521) do
 
   create_table "codes", force: :cascade do |t|
     t.string   "env"
@@ -22,8 +22,20 @@ ActiveRecord::Schema.define(version: 20160606144725) do
     t.string   "statut_client"
     t.integer  "order"
     t.integer  "document_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "client_file_name"
+    t.string   "client_content_type"
+    t.integer  "client_file_size"
+    t.datetime "client_updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "environnement"
+    t.string   "client"
+    t.string   "categorie"
+    t.string   "statut"
   end
 
   add_index "codes", ["document_id"], name: "index_codes_on_document_id"
@@ -38,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160606144725) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "client"
   end
 
 end

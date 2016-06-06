@@ -1,5 +1,13 @@
 module Admin
   class CodesController < Admin::ApplicationController
+   
+
+
+
+
+
+
+
     # To customize the behavior of this controller,
     # simply overwrite any of the RESTful actions. For example:
     #
