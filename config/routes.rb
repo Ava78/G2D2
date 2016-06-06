@@ -1,32 +1,23 @@
 Rails.application.routes.draw do
 
- 
-
   namespace :admin do
-    resources :documents
+    resources :codes
+    resources :documents 
+#Important à conserver pour le dashboard de Administrate. Afin de lui donner les divers onglets du tableaude bord
 
-    root to: "codes#index"
+  root to: "codes#index"
   end
 
-  root to: "documents#index"
 
-  # création de la page about pour expliquer ce que présente le site web
-  get '/about' => 'pages#about'
-
+  root to: "codes#index"
+  
   # création de la page Documents pour montrer les différents documents enregistrés en base de données
   get '/documents' => 'documents#index'
 
+  # Création de la page "Codes" pour création du code
+  get '/codes' => 'codes#index'
 
-#proposés lors de la création du controller - confirmer si routes nécessaires
-  get 'code2_d/index'
 
-  get 'code2_d/create'
-
-  get 'code2_d/show'
-
-  get 'code2_d/edit'
-
-  get 'code2_d/destroy'
 
 
 

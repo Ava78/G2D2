@@ -25,6 +25,9 @@ gem 'dotenv-rails'
 #pour télécharger des fichiers
 gem 'paperclip'
 
+# Gem pour mise en place du QR Code
+gem 'rqrcode', '~> 0.10.1'
+
 
 # Pour tests
 gem 'pry'

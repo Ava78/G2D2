@@ -40,8 +40,8 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
 
-  #paperclip pour installation de ImageMagick
-  Paperclip.options[:command_path] = "/usr/local/bin/"
+  #paperclip pour installation de ImageMagick pour utilisation de Paperclip
+  Paperclip.options[:command_path] = "/usr/bin/"
 
 
 end

@@ -5,13 +5,17 @@ one:
   domaine: MyString
   categorie_metier: MyString
   type_doc: MyString
-  client: MyString
+  client_string: MyString
   statut_client: MyString
+  order: 1
+  document_id: 
 
 two:
   env: MyString
   domaine: MyString
   categorie_metier: MyString
   type_doc: MyString
-  client: MyString
+  client_string: MyString
   statut_client: MyString
+  order: 1
+  document_id: 

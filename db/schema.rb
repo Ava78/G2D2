@@ -11,18 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160603152342) do
+ActiveRecord::Schema.define(version: 20160606144725) do
 
-  create_table "code2_ds", force: :cascade do |t|
+  create_table "codes", force: :cascade do |t|
     t.string   "env"
     t.string   "domaine"
     t.string   "categorie_metier"
     t.string   "type_doc"
-    t.string   "client"
+    t.string   "client_string"
     t.string   "statut_client"
+    t.integer  "order"
+    t.integer  "document_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
+
+  add_index "codes", ["document_id"], name: "index_codes_on_document_id"
 
   create_table "documents", force: :cascade do |t|
     t.string   "title"
