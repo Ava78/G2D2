@@ -1,0 +1,37 @@
+<article>
+	<h2><%= @document.title%></h2>
+	<%= image_tag @document.image.url(:medium), alt: "@document.title" %> <br>
+	<%= @document.description %>
+
+ <!-- afin de montrer la relation one to many (code belong_to document et document has_many codes) génerée par la clef étrangere créée lors de la migration -->
+<div class="jumbotron">
+	<div class="row">
+
+	<section>
+
+	<!-- on peut mettre un message si aucun code n'a été créé pour ce document, pour le moment -->
+	<% if @document.codes.empty? %>
+		<p>Aucun Code n'a été créé pour ce document</p>
+	<% else %>
+	<!-- parcours chacun des codes créés pour ce document et affiche le titre-->
+		<% @document.codes.each do |code| %>
+			<div class="col-sm-4 col-md-3">
+
+					<div class="caption">
+
+						<h3>Client :</h3><h5><%= code.client %></h5> 
+						<h3>Environnement :</h3> <h5><%= code.environnement %></h5> 
+						<h3>Domaine :</h3> <h5><%= code.domaine %></h5> 
+						<h3>Catégorie Métier :</h3><h5> <%= code.categorie %></h5> 
+						<h3>Statut :</h3> <h5><%= code.statut %></h5> 
+	
+					</div>	
+			</div>
+
+
+		<% end %>
+	<% end %>
+	</section>
+</div>
+
+</article>

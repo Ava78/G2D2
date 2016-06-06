@@ -1,5 +1,5 @@
 class Document < ActiveRecord::Base
-	has_many :code
+	has_many :codes
 
 	# la ligne defaut_url permet de prévoir une image par taille (medium ou thumb) en cas d'image manquante
 	# la taille de chaque image est bloquée à 200 x 200 grâce au # après la taille

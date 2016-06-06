@@ -35,6 +35,7 @@ class DocumentDashboard < Administrate::BaseDashboard
     :title,
     :description,
     :image,
+    :slug,
    
   ].freeze
 
