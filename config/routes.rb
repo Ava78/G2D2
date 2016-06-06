@@ -1,24 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'historique/index'
-
-  get 'historique/show'
-
-  get 'historique/edit'
-
-  get 'historique/delete'
-
   namespace :admin do
-    resources :documents 
+       
+    resources :documents
     resources :codes
-    resources :historique
-#Important à conserver pour le dashboard de Administrate. Afin de lui donner les divers onglets du tableau de bord
+
+#Important à conserver pour le dashboard de Administrate. Afin de lui donner les divers onglets du tableaude bord
 
   root to: "documents#index"
   end
 
 
-  root to: "codes#index"
+  root to: "documents#index"
   
   # création de la page Documents pour montrer les différents documents enregistrés en base de données
   get '/documents' => 'documents#index'

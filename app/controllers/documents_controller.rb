@@ -10,9 +10,6 @@ class DocumentsController < ApplicationController
   	if @document.nil?
   		redirect_to root_path
   	end
-  	
-
-
   end
 
 

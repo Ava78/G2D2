@@ -9,12 +9,11 @@
 	<% for code in @codes %>
 		<div class="col-sm-4 col-md-3">
     		<div class="thumbnail">
-    		  <%= image_tag code.image.url(:medium), alt: code.title%>
-    			<div class="caption">
+    		  	<div class="caption">
     			    <h3><%= code.title%></h3>
     			    <p><%= code.description%></p>
-    			    <p><a href="#" class="btn btn-default" role="button">Visualiser le code 2D</a></p>
-    			</div>
+    			    <p><a href="#" class="btn btn-lg btn-default">Créer un Code</a></p>
+       			</div>
     		</div>
   		</div>
 	
