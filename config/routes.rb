@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get '/historique' => 'codes#index'
 
   # Pour récuperer le Slug dans du document dans l'url 
-  get 'documents/:id'=> 'documents#show'
+  get 'documents/:slug'=> 'documents#show', as: 'document'
 
  
 end

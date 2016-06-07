@@ -19,6 +19,16 @@
 	
 	<div class="container" id="police">
 
+<!-- pour affichage du message flash, avec cadre bleu facon bootstrap (div clas alert alert..) -->
+	<% if flash[:none]%>
+		<div class="alert alert-info"> 
+			<%= flash[:none] %>
+		</div>
+	<% end %>
+
+
+
+
 
 	<%= yield %>
 
