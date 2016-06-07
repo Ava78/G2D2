@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607131804) do
+ActiveRecord::Schema.define(version: 20160606155521) do
 
   create_table "codes", force: :cascade do |t|
     t.string   "env"
