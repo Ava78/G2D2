@@ -6,6 +6,15 @@
 
 <div class="jumbotron">
 	<div class="row">
+        <%= form_tag "/documents", method: "post" do %>
+            <input type="text" name="title">
+            <input type="submit" value="Ajouter un document">
+            <%end%>
+        </form>
+<br>
+<hr>
+
+
 	<% for document in @documents %>
 		<div class="col-sm-4 col-md-3">
     		<div class="thumbnail">
@@ -16,8 +25,7 @@
     			    <p><a href="#" class="btn btn-lg btn-default">Créer un Code</a></p>
     			</div>
     		</div>
-  		</div>
-	
+  		</div>	
     <% end %>
 	</div>
 </div> <!-- conserver cette div pour entourer les docs de la class jumbotron -->

@@ -12,12 +12,16 @@ Rails.application.routes.draw do
 
 
   root to: "documents#index"
+
   
   # création de la page Documents pour montrer les différents documents enregistrés en base de données
   get '/documents' => 'documents#index'
 
+  # pour le post du formulaire d'ajout d'un livre
+  post '/documents' => 'documents#create'
+
   # Création de la page "Codes" pour création du code
-  get '/codes' => 'codes#index'
+  get '/historique' => 'codes#index'
 
   # Pour récuperer le Slug dans du document dans l'url 
   get 'documents/:slug'=> 'documents#show'
