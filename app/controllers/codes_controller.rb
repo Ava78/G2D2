@@ -14,5 +14,11 @@ class CodesController < ApplicationController
     #end
   end
 
+  def create
+    Code.create title: params[:title], description: params[:description]
+    redirect_to new_admin_code_path
+  end
+
+
   
 end

@@ -6,15 +6,13 @@
 
 <div class="jumbotron">
 	<div class="row">
+<!--pour formulaire de création d'un nouveau document-->
         <%= form_tag "/documents", method: "post" do %>
-            <input type="text" name="title">
             <input type="submit" value="Ajouter un document">
             <%end%>
         </form>
 <br>
 <hr>
-
-
 	<% for document in @documents %>
 		<div class="col-sm-4 col-md-3">
     		<div class="thumbnail">
