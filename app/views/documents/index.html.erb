@@ -3,27 +3,34 @@
 
 <h1><%= @documents.count%> Documents disponibles </h1>
 <!--pour afficher le nombre de cours enregistrés -->
+<!--pour bouton de création d'un nouveau document-->
+<%= form_tag "/documents", method: "post" do %>
+    <input type="submit" value="Ajouter un document">
+    <%end%>
+</form>
+    <br><hr>
 
 <div class="jumbotron">
 	<div class="row">
-<!--pour formulaire de création d'un nouveau document-->
-        <%= form_tag "/documents", method: "post" do %>
-            <input type="submit" value="Ajouter un document">
-            <%end%>
-        </form>
-<br>
-<hr>
+
 	<% for document in @documents %>
 		<div class="col-sm-4 col-md-3">
     		<div class="thumbnail">
     		  <%= image_tag document.image.url(:medium), alt: document.title%>
     			<div class="caption">
-    			    <h3><%= document.title%></h3>
-    			    <p><%= document.description%></p>
-    			    <p><a href="#" class="btn btn-lg btn-default">Créer un Code</a></p>
-    			</div>
+    			    <!--<h3><%= document.title%></h3> -->
+                    <h3><%= link_to document.title, admin_documents_path%></h3>
+
+
+    			    <h5><%= document.description%></h5>
+
+                    <br>
+
+    			    <p><a href="/admin/codes/new" class="btn btn-lg btn-default">Créer un Code</a></p>
+
+           		</div>
     		</div>
   		</div>	
     <% end %>
 	</div>
-</div> <!-- conserver cette div pour entourer les docs de la class jumbotron -->
+</div> <!-- conserver cette div pour entourer les docs de la class jumbotron
