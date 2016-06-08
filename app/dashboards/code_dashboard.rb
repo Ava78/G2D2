@@ -35,12 +35,12 @@ class CodeDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :document,
-    :slug,
     :environnement,
     :domaine,
     :categorie,
     :client,
     :statut,
+    :slug,
     :position,
     :image,
   #je retire order pour ne pas l'avoir dans le formulaire
@@ -50,13 +50,13 @@ class CodeDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :document,
-    :slug,
     :environnement,
     :domaine,
     :categorie,
     :client,
     :statut,
     :image,
+    :slug,
     :created_at,
     :updated_at,
   ].freeze
@@ -71,6 +71,7 @@ class CodeDashboard < Administrate::BaseDashboard
     :statut,
     :image,
     :position,
+    
     
   ].freeze
 

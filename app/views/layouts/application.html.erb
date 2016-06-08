@@ -8,27 +8,32 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
-  <!-- Liens pour le footer-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+	<!-- partie BOOTSTRAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 
+	<!-- Liens pour le footer-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
 </head>
+
+	<!-- les renders concernent les partials cf layouts/partials/_nav et _footer-->
+
 <body>
 	<%= render 'layouts/partials/nav' %>
-	
+		
 	<div class="container" id="police">
 
-<!-- pour affichage du message flash, avec cadre bleu facon bootstrap (div clas alert alert..) -->
+<!-- pour affichage du message flash, avec cadre bleu facon bootstrap si l'utilisateur demande l'url avec un doc qui n'existe pas en base (div class alert alert..) ex : /documents/ KJJKJKJ.
+CF. controllers/documents_controller.rb:-->
+
 	<% if flash[:none]%>
 		<div class="alert alert-info"> 
 			<%= flash[:none] %>
 		</div>
 	<% end %>
-
-
-
-
 
 	<%= yield %>
 
@@ -36,7 +41,7 @@
 
 	</div>
 
-	<!-- les renders concernent les partials-->
+	
 
 	<!-- Bootstrap JavaScript-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

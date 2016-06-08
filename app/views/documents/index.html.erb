@@ -4,9 +4,7 @@
 <h1><%= @documents.count%> Documents disponibles </h1>
 <!--pour afficher le nombre de cours enregistrés -->
 <!--pour bouton de création d'un nouveau document-->
-<%= form_tag "/documents", method: "post" do %>
-    <input type="submit" value="Ajouter un document">
-    <%end%>
+
 
     <br><hr>
 
@@ -23,7 +21,7 @@
 
 
     			    <h5><%= truncate(document.description, length: 150)%></h5>
-
+        <!-- truncate sert à tronquer le message de description à 150 caractères -->
                     <br>
 
     			    <p><a href="/admin/codes/new" class="btn btn-lg btn-default">Créer un Code</a></p>

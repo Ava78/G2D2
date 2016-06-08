@@ -1,4 +1,55 @@
-<h1>ici la page pour voir le code</h1>
+<% provide(:title, "Code demandé") %>
+<!-- Permet de donner un nom à la page -->
 
 
+<!-- Cette page pour voir le code demandé suite page historique -->
+<article>
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="caption">
 
+						<h5>Client :</h5><h4><%= code.client %></h4> 
+						<h5>Environnement :</h5> <h4><%= code.environnement %></h4> 
+						<h5>Domaine :</h5> <h4><%= code.domaine %></h4> 
+						<h5>Catégorie Métier :</h5><h4> <%= code.categorie %></h4> 
+						<h5>Statut :</h5> <h4><%= code.statut %></h4> 
+	
+				</div>	
+			</div>
+		</div>
+	</div>
+	<hr>
+
+
+<div class="jumbotron">
+	<div class="row">
+
+	<section>
+
+	<!-- on peut mettre un message si aucun code n'a été créé pour ce document, pour le moment -->
+	<% if @document.codes.empty? %>
+		<p>Aucun Code n'a été créé pour ce document</p>
+	<% else %>
+	<!-- parcours chacun des codes créés pour ce document et affiche le titre-->
+		<% @document.codes.order('position').each do |code| %>
+			<div class="col-xs-6 col-md-4">
+
+					<div class="caption">
+
+						<h5>Client :</h5><h4><%= code.client %></h4> 
+						<h5>Environnement :</h5> <h4><%= code.environnement %></h4> 
+						<h5>Domaine :</h5> <h4><%= code.domaine %></h4> 
+						<h5>Catégorie Métier :</h5><h4> <%= code.categorie %></h4> 
+						<h5>Statut :</h5> <h4><%= code.statut %></h4> 
+	
+					</div>	
+			</div>
+
+
+		<% end %>
+	<% end %>
+	</section>
+</div>
+
+</article>

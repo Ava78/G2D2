@@ -11,21 +11,14 @@ class CodesController < ApplicationController
   end
 
   def show
-    #
+    # Pour retrouver le code réalisé pour le doc... x. on va le rechercher par le biais du slug.
 
-    @code = Code.joins(:document)
-                .where(
-                  'documents.slug' => params[:slug_document],
-                  'slug' => params[:slug_code]
-                  ).first
-    render text: @code.document.client
-
-
-
+    @code = Code.find(:id)
+    
+    # Message d'alerte flash si pas de code pour le document
+    #if @document.nil?
+    #  flash[:none] = "Aucun code n'a pour l'instant été généré. Souhaitez vous en créé un ?"
+    #  redirect_to admin_new_code_path
   end
-
-  
-
-
-  
+ 
 end

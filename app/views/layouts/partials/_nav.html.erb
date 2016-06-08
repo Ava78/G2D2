@@ -6,7 +6,7 @@
   <h1 class="name"><i class="fi-widget"></i>G2D2</h1>
 
   <ul class="inline-list">
-    <li class="active"><%= link_to "Créer un code", new_admin_code_path%></li>
+    <li class="active"><%= link_to "Consulter les codes", admin_codes_path%></li>
   </ul>
 
   <ul class="inline-list">
@@ -14,8 +14,19 @@
   </ul>
 
 
+  <ul class="inline-list">
+    <li class="active"><a href="/admin/codes/new">Créer un code</a></li>
+  </ul>
 
 
+
+  <ul class="inline-list">
+    <li class="active"><a href="/admin/documents/new">Ajouter un document</li>
+  </ul>
+
+
+
+<!--Partie de droite !! -->
   <ul class="inline-list hide-for-small-only account-action">
     <li><a href="#" data-reveal-id="myModal">S'inscrire</a></li>
     <li class=""><a class="signup" href="#" data-reveal-id="myModal">Connexion</a></li>
