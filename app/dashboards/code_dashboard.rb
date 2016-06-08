@@ -23,6 +23,7 @@ class CodeDashboard < Administrate::BaseDashboard
     image_updated_at: Field::DateTime,
     position: Field::Number,
     order: Field::Number,
+    slug: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -34,32 +35,33 @@ class CodeDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :document,
+    :slug,
     :environnement,
     :domaine,
     :categorie,
     :client,
     :statut,
+    :position,
     :image,
-    :created_at,
-    ].freeze
+  #je retire order pour ne pas l'avoir dans le formulaire
+  ].freeze
 
+  # SHOW_PAGE_ATTRIBUTES
+  # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :document,
-    :id,
+    :slug,
     :environnement,
     :domaine,
     :categorie,
     :client,
     :statut,
     :image,
-    :order,
     :created_at,
     :updated_at,
   ].freeze
 
-  # FORM_ATTRIBUTES
-  # an array of attributes that will be displayed
-  # on the model's form (`new` and `edit`) pages.
+  #
   FORM_ATTRIBUTES = [
     :document,
     :environnement,
@@ -69,6 +71,7 @@ class CodeDashboard < Administrate::BaseDashboard
     :statut,
     :image,
     :position,
+    
   ].freeze
 
   # Nous décommentons ce qui suit pour afficher le code dans l'admin des codes

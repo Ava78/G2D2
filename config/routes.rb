@@ -30,6 +30,6 @@ Rails.application.routes.draw do
   get 'historique' => 'codes#index'
 
   #pour aller sur le code généré sur  document précisé : le code X du doc BA - par le slug
-  get 'documents/:slug_document/codes/slug_code' => 'codes#show', as: :code
+  get 'documents/:slug_document/codes/:slug_code' => 'codes#show', as: :code
  
 end
