@@ -35,6 +35,8 @@ Rails.application.routes.draw do
   #pour modif l'url et voir tous les codes, l'url s'appelera historique
   get 'historique' => 'codes#index'
 
+  #
+  get'documents/:slug_document' => 'documents#show'
 
  
 
