@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'pages/index'
+
+  get 'pages/show'
+
   namespace :admin do
        
     resources :documents
@@ -10,7 +14,7 @@ Rails.application.routes.draw do
   
   end
 
-  root to: 'codes#index'
+  root to: 'pages#index'
   
   
   # création de la page Documents pour montrer les différents documents enregistrés en base de données
