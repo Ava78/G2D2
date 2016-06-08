@@ -29,7 +29,7 @@
 		<p>Aucun Code n'a été créé pour ce document</p>
 	<% else %>
 	<!-- parcours chacun des codes créés pour ce document et affiche le titre-->
-		<% @document.codes.each do |code| %>
+		<% @document.codes.order('position').each do |code| %>
 			<div class="col-xs-6 col-md-4">
 
 					<div class="caption">

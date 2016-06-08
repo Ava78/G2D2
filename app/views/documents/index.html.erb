@@ -7,7 +7,7 @@
 <%= form_tag "/documents", method: "post" do %>
     <input type="submit" value="Ajouter un document">
     <%end%>
-</form>
+
     <br><hr>
 
 <div class="jumbotron">
@@ -22,7 +22,7 @@
                     <h3><%= link_to document.title, admin_documents_path%></h3>
 
 
-    			    <h5><%= document.description%></h5>
+    			    <h5><%= truncate(document.description, length: 150)%></h5>
 
                     <br>
 

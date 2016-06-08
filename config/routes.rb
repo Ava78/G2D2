@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
 
-  root to: "documents#index"
+  root to: "codes#index"
 
   
   # création de la page Documents pour montrer les différents documents enregistrés en base de données
@@ -26,5 +26,10 @@ Rails.application.routes.draw do
   # Pour récuperer le Slug dans du document dans l'url 
   get 'documents/:slug'=> 'documents#show', as: 'document'
 
+  #pour modif l'url et voir tous les codes, l'url s'appelera historique
+  get 'historique' => 'codes#index'
+
+  #pour aller sur le code généré sur  document précisé : le code X du doc BA - par le slug
+  get 'documents/:slug_document/codes/slug_code' => 'codes#show', as: :code
  
 end

@@ -21,6 +21,7 @@ class CodeDashboard < Administrate::BaseDashboard
     image_content_type: Field::String,
     image_file_size: Field::Number,
     image_updated_at: Field::DateTime,
+    position: Field::Number,
     order: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -33,18 +34,15 @@ class CodeDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :document,
-    :id,
     :environnement,
     :domaine,
     :categorie,
     :client,
     :statut,
     :image,
-  #je retire order pour ne pas l'avoir dans le formulaire
-  ].freeze
+    :created_at,
+    ].freeze
 
-  # SHOW_PAGE_ATTRIBUTES
-  # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :document,
     :id,
@@ -70,11 +68,13 @@ class CodeDashboard < Administrate::BaseDashboard
     :client,
     :statut,
     :image,
-    :order,
+    :position,
   ].freeze
 
   # Nous décommentons ce qui suit pour afficher le code dans l'admin des codes
     def display_resource(code)
       code.image
+
+
     end
 end
