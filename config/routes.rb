@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   end
 
-  root to: 'pages#index'
+  root to: 'documents#index'
   
   
   # Création de la page Documents pour montrer les différents documents enregistrés en base de données

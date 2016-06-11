@@ -6,7 +6,7 @@
   <h1 class="name"><i class="fi-widget"></i><%= link_to "G2D2", root_path%></h1>
 
   <ul class="inline-list">
-    <li class="active"><%= link_to "Consulter les codes", admin_codes_path%></li>
+    <li class="active"><%= link_to "Consulter les codes", historique_path%></li>
   </ul>
 
   <ul class="inline-list">
@@ -15,11 +15,12 @@
 
 
   <ul class="inline-list">
-    <li class="active"><a href="/admin/codes/new">Créer un code</a></li>
+    <li class="active"><%= link_to "Créer un code", new_admin_code_path%></li>
   </ul>
 
+
   <ul class="inline-list">
-    <li class="active"><a href="/admin/documents/new">Ajouter un document</a></li>
+    <li class="active"><%= link_to "Ajouter un document", new_admin_document_path%></li>
   </ul>
 
 

@@ -35,10 +35,10 @@ class CodeDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :document,
+    :client,
     :environnement,
     :domaine,
     :categorie,
-    :client,
     :statut,
     :slug,
     :position,
@@ -49,11 +49,11 @@ class CodeDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
+    :client,
     :document,
     :environnement,
     :domaine,
     :categorie,
-    :client,
     :statut,
     :image,
     :slug,
@@ -64,10 +64,10 @@ class CodeDashboard < Administrate::BaseDashboard
   #
   FORM_ATTRIBUTES = [
     :document,
+    :client,
     :environnement,
     :domaine,
     :categorie,
-    :client,
     :statut,
     :image,
     :slug, 
@@ -76,6 +76,7 @@ class CodeDashboard < Administrate::BaseDashboard
 
   # Nous décommentons ce qui suit pour afficher le code dans l'admin des codes
     def display_resource(code)
-      code.image
+      code.client
+      code.environnement
     end
 end

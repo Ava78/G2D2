@@ -27,9 +27,10 @@
 
 	<!-- on peut mettre un message si aucun code n'a été créé pour ce document, pour le moment -->
 	<% if @document.codes.empty? %>
-		<p>Aucun Code n'a été créé pour ce document</p>
+		<p>Aucun Code n'a été créé pour ce document.</p>
+		<p>Pour en créer un, cliquez sur "Créer un Code".</p>
 	<% else %>
-	<!-- parcours chacun des codes créés pour ce document et affiche les infos suivantes-->
+	<!-- parcours chacun des codes créés pour ce document et affiche les infos suivantes et tri les par ordre de position-->
 		<% @document.codes.order('position').each do |code| %>
 			<div class="col-xs-6 col-md-4">
 

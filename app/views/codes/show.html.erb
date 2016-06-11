@@ -2,23 +2,19 @@
 <!-- Permet de donner un nom à la page -->
 
 <!-- Cette page pour voir le code demandé suite page historique -->
-<article>
-	<div class="jumbotron">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="caption">
 
-						<h5>Client :</h5><h4><%= code.client.slug %></h4> 
-						<h5>Environnement :</h5> <h4><%= code.environnement %></h4> 
-						<h5>Domaine :</h5> <h4><%= code.domaine %></h4> 
-						<h5>Catégorie Métier :</h5><h4> <%= code.categorie %></h4> 
-						<h5>Statut :</h5> <h4><%= code.statut %></h4>
-						<h5>Raccourci :</h5> <h4><%= code.slug %></h4> 
-	
-				</div>	
-			</div>
+<div class="jumbotron">
+	<div class="row">
+
+		<div class="col-md-4">
+			<div class="caption">
+				<h5>Client :</h5><h4><%= code.client %></h4> 
+				<h5>Environnement :</h5> <h4><%= code.environnement %></h4> 
+				<h5>Domaine :</h5> <h4><%= code.domaine %></h4> 
+				<h5>Catégorie Métier :</h5><h4> <%= code.categorie %></h4> 
+				<h5>Statut :</h5> <h4><%= code.statut %></h4>
+				<h5>Raccourci :</h5> <h4><%= code.slug %></h4> 
+			</div>	
 		</div>
 	</div>
-	<hr>
-
-</article>
+</div>

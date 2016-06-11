@@ -2,6 +2,7 @@
 <!-- Permet de donner un nom à la page -->
 
 <h1><%= @documents.count%> Documents disponibles </h1>
+<h3>Pour consulter les codes réalisés par document, cliquez sur le document concerné.</h3>
 <!--pour afficher le nombre de cours enregistrés -->
 
     <br><hr>
@@ -21,12 +22,11 @@
     			    <h5><%= truncate(document.description, length: 150)%></h5>
         <!-- truncate sert à tronquer le message de description à 150 caractères -->
                     <br>
-
-    			    
-
            		</div>
     		</div>
   		</div>	
     <% end %>
 	</div>
-</div> <!-- conserver cette div pour entourer les docs de la class jumbotron
+</div> <!-- conserver cette div pour entourer les docs de la class jumbotron -->
+
+
