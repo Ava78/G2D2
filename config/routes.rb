@@ -25,7 +25,8 @@ Rails.application.routes.draw do
   get 'codes/:id' => 'codes#show', as: 'code'
 
   #Pour retrouver le doc lui meme avec pour url /documents/le_nom_du_doc <-- SLUG
-  get 'documents/:slug' => 'documents#show', as: 'document'
+  # utile pour le bouton "voir le doc" quand on est sur la page des documents
+  get 'documents/:slug' => 'documents#show', as: :document
 
   
  
