@@ -4,6 +4,7 @@ Rails.application.routes.draw do
        
     resources :documents
     resources :codes
+    resources :societes
 
 #Important à conserver pour le dashboard de Administrate. Afin de lui donner les divers onglets du tableau de bord
   

@@ -1,6 +1,6 @@
 class Code < ActiveRecord::Base
 	belongs_to :document
-	belongs_to :client
+	belongs_to :societe
 
 	
 	attr_accessor :image_file_name

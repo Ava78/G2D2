@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160611161851) do
+ActiveRecord::Schema.define(version: 20160611183334) do
 
   create_table "codes", force: :cascade do |t|
     t.string   "env"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160611161851) do
     t.string   "statut"
     t.integer  "position"
     t.string   "slug"
+    t.string   "societe"
   end
 
   add_index "codes", ["document_id"], name: "index_codes_on_document_id"
@@ -53,6 +54,14 @@ ActiveRecord::Schema.define(version: 20160611161851) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "client"
+  end
+
+  create_table "societes", force: :cascade do |t|
+    t.string   "nom"
+    t.string   "adresse"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "environnement"
   end
 
   create_table "users", force: :cascade do |t|
