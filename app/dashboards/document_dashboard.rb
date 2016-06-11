@@ -46,7 +46,8 @@ class DocumentDashboard < Administrate::BaseDashboard
     :description,
     :image,
     :slug,
-    :image_updated_at,
+    
+    
   ].freeze
 
   # Nous avons décommenter ce qui suit pour que le titre du doc s'affiche dans l'administration des documents 

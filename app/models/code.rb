@@ -1,5 +1,7 @@
 class Code < ActiveRecord::Base
 	belongs_to :document
+
+	
 	attr_accessor :image_file_name
 	default_scope { order('position DESC')}
 	

@@ -70,7 +70,7 @@ class CodeDashboard < Administrate::BaseDashboard
     :client,
     :statut,
     :image,
-    :position,
+    
     
     
   ].freeze
@@ -78,7 +78,5 @@ class CodeDashboard < Administrate::BaseDashboard
   # Nous décommentons ce qui suit pour afficher le code dans l'admin des codes
     def display_resource(code)
       code.image
-
-
     end
 end

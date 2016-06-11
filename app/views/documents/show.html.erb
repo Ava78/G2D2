@@ -28,7 +28,7 @@
 	<% if @document.codes.empty? %>
 		<p>Aucun Code n'a été créé pour ce document</p>
 	<% else %>
-	<!-- parcours chacun des codes créés pour ce document et affiche le titre-->
+	<!-- parcours chacun des codes créés pour ce document et affiche les infos suivantes-->
 		<% @document.codes.order('position').each do |code| %>
 			<div class="col-xs-6 col-md-4">
 

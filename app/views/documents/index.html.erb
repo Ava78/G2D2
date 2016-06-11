@@ -1,10 +1,8 @@
-<% provide(:title, "Documents") %>
+<% provide(:title, "Bibliothèque") %>
 <!-- Permet de donner un nom à la page -->
 
 <h1><%= @documents.count%> Documents disponibles </h1>
 <!--pour afficher le nombre de cours enregistrés -->
-<!--pour bouton de création d'un nouveau document-->
-
 
     <br><hr>
 
@@ -12,19 +10,12 @@
 	<div class="row">
 
 	<% for document in @documents %>
-		<div class="col-sm-4 col-md-3">
+		<div class="col-sm-6 col-md-4">
     		<div class="thumbnail">
     		  <%= image_tag document.image.url(:medium), alt: document.title%>
     			<div class="caption">
-
-
-
     			    <!-- Ici le lien des titres des documents doivent router sur le doc lui meme. -->
-                    <h3><a href="/documents/slug"></a><%=document.title%></h3>
-
-
-
-
+                    <h3><%= link_to document.title, documents_path%></h3>
 
 
     			    <h5><%= truncate(document.description, length: 150)%></h5>

@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'pages/index'
-
-  get 'pages/show'
-
   namespace :admin do
        
     resources :documents
     resources :codes
 
-#Important à conserver pour le dashboard de Administrate. Afin de lui donner les divers onglets du tableaude bord
-
+#Important à conserver pour le dashboard de Administrate. Afin de lui donner les divers onglets du tableau de bord
   
   end
 
@@ -26,19 +21,11 @@ Rails.application.routes.draw do
   # Création de la page "Codes" pour création du code
   get '/historique' => 'codes#index'
 
-  # Pour récuperer le Slug dans du document dans l'url 
-  get 'documents/:slug'=> 'documents#show', as: 'document'
-
   #pour aller sur le code généré sur  document précisé : le code X du doc BA - par le slug
   get 'codes/:id' => 'codes#show', as: 'code'
 
-  #pour modif l'url et voir tous les codes, l'url s'appelera historique
-  get 'historique' => 'codes#index'
-
-  #
-  get'documents/:slug_document' => 'documents#show'
-
- 
+  #Pour retrouver le doc lui meme avec pour url /documents/le_nom_du_doc <-- SLUG
+  get 'documents/:slug' => 'documents#show', as: 'document'
 
   
  

@@ -13,15 +13,8 @@ class DocumentsController < ApplicationController
   end
 
   def create
-    Document.create title: params[:title], description: params[:description]
+    Document.create title: params[:title], description: params[:description], slug: params[:slug]
     redirect_to new_admin_document_path
   end
-
-
-
-
-
-
-
   
 end
