@@ -15,14 +15,14 @@
     		  <%= image_tag document.image.url(:medium), alt: document.title%>
     			<div class="caption">
     			    <!-- Ici le lien des titres des documents doivent router sur le doc lui meme. -->
-                    <h3><%= link_to document.title, documents_path%></h3>
+                    <h3><%= link_to document.title, document_path(document.slug)%></h3>
 
 
     			    <h5><%= truncate(document.description, length: 150)%></h5>
         <!-- truncate sert à tronquer le message de description à 150 caractères -->
                     <br>
 
-    			    <p><a href="<%= document_path(document.slug) %>" class="btn btn-lg btn-default">Voir le document</a></p>
+    			    
 
            		</div>
     		</div>

@@ -70,8 +70,7 @@ class CodeDashboard < Administrate::BaseDashboard
     :client,
     :statut,
     :image,
-    
-    
+    :slug, 
     
   ].freeze
 

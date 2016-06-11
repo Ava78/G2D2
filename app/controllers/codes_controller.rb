@@ -1,6 +1,4 @@
 class CodesController < ApplicationController
- require 'rqrcode'
-
   def index
     @codes = Code.all     
   end
@@ -12,13 +10,13 @@ class CodesController < ApplicationController
 
   def show
     # Pour retrouver le code réalisé pour le doc... x. on va le rechercher par le biais du slug.
-
-    @code = Code.find(:id)
+    @code = Code.find_by(slug: params[:slug])
     
     # Message d'alerte flash si pas de code pour le document
-    #if @document.nil?
-    #  flash[:none] = "Aucun code n'a pour l'instant été généré. Souhaitez vous en créé un ?"
-    #  redirect_to admin_new_code_path
+    if @code.nil?
+      flash[:none] = "Aucun code n'a pour l'instant été généré. Souhaitez vous en créé un ?"
+      redirect_to new_admin_code_path
+    end
   end
  
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607150059) do
+ActiveRecord::Schema.define(version: 20160611161851) do
 
   create_table "codes", force: :cascade do |t|
     t.string   "env"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160607150059) do
     t.string   "categorie"
     t.string   "statut"
     t.integer  "position"
+    t.string   "slug"
   end
 
   add_index "codes", ["document_id"], name: "index_codes_on_document_id"
