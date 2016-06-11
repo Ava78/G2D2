@@ -13,8 +13,7 @@ class SocieteDashboard < Administrate::BaseDashboard
     nom: Field::String,
     adresse: Field::String, 
     environnement: Field::String   
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -34,8 +33,7 @@ class SocieteDashboard < Administrate::BaseDashboard
     :nom,
     :adresse, 
     :environnement,
-    :created_at,
-    :updated_at,
+ 
   ].freeze
 
   #
@@ -46,7 +44,7 @@ class SocieteDashboard < Administrate::BaseDashboard
   ].freeze
 
   # Nous décommentons ce qui suit pour afficher le code dans l'admin des codes
-    def display_resource(code)
+    def display_resource(societe)
       societe.nom
     end
 end

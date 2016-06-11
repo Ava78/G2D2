@@ -4,7 +4,7 @@ class SocietesController < ApplicationController
   end
 
   def show
-    @societe = Societe.find_by(slug: params[:slug])
+    @societe = Societe.find_by(nom: params[:nom])
   end
 
   def create
