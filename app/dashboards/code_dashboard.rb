@@ -9,7 +9,7 @@ class CodeDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     document: Field::BelongsTo,
-    societe: Field::BelongsTo,
+    client: Field::String,
     id: Field::Number,
     environnement: Field::String,
     domaine: Field::String,
@@ -36,13 +36,13 @@ class CodeDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :document,
-    :societe,
+    :client,
     :environnement,
     :domaine,
     :categorie,
     :statut,
     :slug,
-    :position,
+    
     :image,
   #je retire order pour ne pas l'avoir dans le formulaire
   ].freeze
@@ -50,7 +50,7 @@ class CodeDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
-    :societe,
+    :client,
     :document,
     :environnement,
     :domaine,
@@ -65,7 +65,7 @@ class CodeDashboard < Administrate::BaseDashboard
   #
   FORM_ATTRIBUTES = [
     :document,
-    :societe,
+    :client,
     :environnement,
     :domaine,
     :categorie,

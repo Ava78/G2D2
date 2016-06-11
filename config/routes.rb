@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   # utile pour le bouton "voir le doc" quand on est sur la page des documents
   get 'documents/:slug' => 'documents#show', as: :document
 
+  get 'societes' => 'societes#show'
+
   
  
 end

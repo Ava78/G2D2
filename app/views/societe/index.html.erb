@@ -1,2 +1,30 @@
-<h1>Societe#index</h1>
-<p>Find me in app/views/societe/index.html.erb</p>
+<% provide(:title, "Bibliothèque") %>
+<!-- Permet de donner un nom à la page -->
+
+<h1><%= @documents.count%> Documents disponibles </h1>
+<h3>Pour consulter les codes réalisés par document, cliquez sur le document concerné.</h3>
+<!--pour afficher le nombre de cours enregistrés -->
+
+    <br><hr>
+
+<div class="jumbotron">
+	<div class="row">
+
+	<% for document in @documents %>
+		<div class="col-sm-6 col-md-4">
+    		<div class="thumbnail">
+    		  <%= image_tag document.image.url(:medium), alt: document.title%>
+    			<div class="caption">
+    			    <!-- Ici le lien des titres des documents doivent router sur le doc lui meme. -->
+                    <h3><%= link_to document.title, document_path(document.slug)%></h3>
+
+
+    			    <h5><%= truncate(document.description, length: 150)%></h5>
+        <!-- truncate sert à tronquer le message de description à 150 caractères -->
+                    <br>
+           		</div>
+    		</div>
+  		</div>	
+    <% end %>
+	</div>
+</div> <!-- conserver cette div pour entourer les docs de la class jumbotron -->
