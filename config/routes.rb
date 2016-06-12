@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'user/index'
+
+  get 'user/login'
+
+  get 'user/check'
+
     root to: 'documents#index'
   
   
