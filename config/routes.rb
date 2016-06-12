@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'user/index'
-
-  get 'user/login'
-
-  get 'user/check'
-
     root to: 'documents#index'
   
   
@@ -29,11 +23,11 @@ Rails.application.routes.draw do
 
   get '/societes' => 'societes#show'
 
-# Pour déconnexion par devise
-
-
-# Pour devise
+  # Pour devise
   devise_for :users
+
+  # Routes pour les USERS
+  get 'user/check'
 
 
 
