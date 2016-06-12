@@ -35,11 +35,7 @@
 <!-- pour affichage du message flash, avec cadre bleu facon bootstrap si l'utilisateur demande l'url avec un doc qui n'existe pas en base (div class alert alert..) ex : /documents/ KJJKJKJ.
 CF. controllers/documents_controller.rb:-->
 
-	<% if flash[:none]%>
-		<div class="alert alert-info"> 
-			<%= flash[:none] %>
-		</div>
-	<% end %>
+	<%= render 'layouts/partials/flash' %>
 
 	<%= yield %>
 
@@ -51,8 +47,6 @@ CF. controllers/documents_controller.rb:-->
 
 	<!-- Bootstrap JavaScript-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
 
 </body>
 </html>

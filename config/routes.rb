@@ -1,15 +1,6 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-       
-    resources :documents
-    resources :codes
-    resources :societes
-
-#Important à conserver pour le dashboard de Administrate. Afin de lui donner les divers onglets du tableau de bord
-  
-  end
-
+  devise_for :users
   root to: 'documents#index'
   
   
@@ -34,6 +25,13 @@ Rails.application.routes.draw do
 
   get '/societes' => 'societes#show'
 
+#Important à conserver pour le dashboard de Administrate. Afin de lui donner les divers onglets du tableau de bord
+  namespace :admin do
+       
+    resources :documents
+    resources :codes
+    resources :societes
+
   
- 
+  end
 end

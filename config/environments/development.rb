@@ -43,5 +43,9 @@ Rails.application.configure do
   #paperclip pour installation de ImageMagick pour utilisation de Paperclip
   Paperclip.options[:command_path] = "/usr/bin/"
 
+  #pour installation de DEVISE - Authentification des users
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+
 
 end

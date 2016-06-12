@@ -5,6 +5,9 @@ gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+# pour créer des membres authentification
+gem 'devise', '~> 3.5', '>= 3.5.6'
+
 # Gem pour création du QRCode
 gem 'qrcode'
 

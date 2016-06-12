@@ -30,7 +30,7 @@ class CodesController < ApplicationController
 
     # Message d'alerte flash si pas de code pour le document
     if @code.nil?
-      flash[:none] = "Aucun code n'a pour l'instant été généré. Souhaitez vous en créé un ?"
+      flash[:notice] = "Aucun code n'a pour l'instant été généré. Souhaitez vous en créé un ?"
       redirect_to new_admin_code_path
     end
   end
