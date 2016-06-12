@@ -1,8 +1,8 @@
-<% provide(:title, "Historique des Codes Crées") %>
+<% provide(:title, "Historique") %>
 <!-- Permet de donner un nom à la page -->
 
 <!--pour afficher le nombre de cours enregistrés -->
-<h1>Historique (<%= @codes.count %>)</h1>
+<h1>Historique: <%= @codes.count %> Codes générés</h1>
 
 <div class="jumbotron">
 	<div class="row">
@@ -10,16 +10,15 @@
 		<div class="col-sm-4 col-md-3">
     		<div class="thumbnail">
     		  	<div class="caption">
-    			    <h3><%= code.client%></h3>
-    			    <p><%= code.environnement%></p>
-                    <p><%= code.domaine%></p>
-                    <p><%= code.categorie%></p>
-                    <p><%= code.statut%></p>
-           
+    			    <h5>Client :</h5><h4><%= code.client %></h4> 
+                        <h5>Environnement :</h5> <h4><%= code.environnement %></h4> 
+                        <h5>Domaine :</h5> <h4><%= code.domaine %></h4> 
+                        <h5>Catégorie Métier :</h5><h4> <%= code.categorie %></h4> 
+                        <h5>Statut :</h5> <h4><%= code.statut %></h4>
+                        <h5>Image :</h5> <h4><%= code.image %></h4> 
                 </div>
     		</div>
   		</div>
-	
-<% end %>
+	<% end %>
 	</div>
 </div> <!-- conserver cette div pour entourer les docs de la class jumbotron -->

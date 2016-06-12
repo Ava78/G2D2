@@ -1,4 +1,4 @@
-<% provide(:title, "Codes pour ce document") %>
+<% provide(:title, "Codes du document") %>
 <!-- Permet de donner un nom à la page -->
 
 
@@ -18,7 +18,7 @@
 			</div>
 	</div>
 	<hr>
-
+	<p>Ci-dessous les différents codes générés pour ce documents.</p>
 
 <div class="jumbotron">
 	<div class="row">
@@ -40,13 +40,11 @@
 						<h5>Environnement :</h5> <h4><%= code.environnement %></h4> 
 						<h5>Domaine :</h5> <h4><%= code.domaine %></h4> 
 						<h5>Catégorie Métier :</h5><h4> <%= code.categorie %></h4> 
-						<h5>Statut :</h5> <h4><%= code.statut %></h4> 
-						<p><a href="<%= code_path(code.slug) %>" class="btn btn-lg btn-default">Voir le code</a></p>
-	
+						<h5>Statut :</h5> <h4><%= code.statut %></h4>
+						<h5>Image:</h5> <h4><%= code.image %></h4> 
+							
 					</div>	
 			</div>
-
-
 		<% end %>
 	<% end %>
 	</section>

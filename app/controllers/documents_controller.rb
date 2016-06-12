@@ -4,7 +4,8 @@ class DocumentsController < ApplicationController
   end
 
   def show
-  	#nous devons vérifier que cela ne fonctionne que si un document existe ainsi que son slug. En cas de cours non-existant --> redirigé sur page d'accueil
+  	#nous devons vérifier que cela ne fonctionne que si un document existe ainsi 
+    #que son slug. En cas de cours non-existant --> redirigé sur page d'accueil
   	@document = Document.find_by(slug: params[:slug])
   	if @document.nil?
       flash[:none] = "Le document demandé n'existe pas. Contactez le service GED pour demander l'insertion."

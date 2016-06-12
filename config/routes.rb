@@ -21,16 +21,18 @@ Rails.application.routes.draw do
 
   # Création de la page "Codes" pour création du code
   get '/historique' => 'codes#index'
+  get '/codes' =>'codes#index'
 
-  # Pour aller sur le code généré sur  document précisé : le code X du doc BA - par le slug
+  # Pour retrouver le doc ou le code seul, par le biais du slug :  url /documents/le_nom_du_doc <-- SLUG
+  # ou url /codes/leaseplan_ba
+  # Pratique pour les boutons et liens vers les pages
+  get 'documents/:slug' => 'documents#show', as: :document
+
+  # Idem Pour afficher le code 
   get 'codes/:slug' => 'codes#show', as: :code
 
 
-  # Pour retrouver le doc lui meme avec pour url /documents/le_nom_du_doc <-- SLUG
-  # utile pour le bouton "voir le doc" quand on est sur la page des documents
-  get 'documents/:slug' => 'documents#show', as: :document
-
-  get 'societes' => 'societes#show'
+  get '/societes' => 'societes#show'
 
   
  

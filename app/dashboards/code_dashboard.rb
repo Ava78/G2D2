@@ -41,8 +41,7 @@ class CodeDashboard < Administrate::BaseDashboard
     :domaine,
     :categorie,
     :statut,
-    :slug,
-    
+    :slug,    
     :image,
   #je retire order pour ne pas l'avoir dans le formulaire
   ].freeze
@@ -77,7 +76,7 @@ class CodeDashboard < Administrate::BaseDashboard
 
   # Nous décommentons ce qui suit pour afficher le code dans l'admin des codes
     def display_resource(code)
-      code.societe
-      code.environnement
+      code.client
+      
     end
 end
