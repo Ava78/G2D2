@@ -7,6 +7,8 @@ gem 'sqlite3'
 
 # pour créer des membres authentification
 gem 'devise', '~> 3.5', '>= 3.5.6'
+# pour mise en page des pages USER / DEVISE
+gem 'devise-bootstrap-views', '~> 0.0.8'
 
 # Gem pour création du QRCode
 gem 'qrcode'

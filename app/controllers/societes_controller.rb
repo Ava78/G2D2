@@ -1,4 +1,6 @@
 class SocietesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @societes = Societe.all
   end

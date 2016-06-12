@@ -1,4 +1,6 @@
 class CodesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     # pour la page historique, affiche tous les codes
     @codes = Code.all     

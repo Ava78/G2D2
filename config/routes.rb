@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-  root to: 'documents#index'
+    root to: 'documents#index'
   
   
   # Création de la page Documents pour montrer les différents documents enregistrés en base de données
@@ -22,8 +21,15 @@ Rails.application.routes.draw do
   # Idem Pour afficher le code 
   get 'codes/:slug' => 'codes#show', as: :code
 
-
   get '/societes' => 'societes#show'
+
+# Pour déconnexion par devise
+
+
+# Pour devise
+  devise_for :users
+
+
 
 #Important à conserver pour le dashboard de Administrate. Afin de lui donner les divers onglets du tableau de bord
   namespace :admin do
