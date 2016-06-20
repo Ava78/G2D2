@@ -1,9 +1,6 @@
 <% provide(:title, "Codes du document") %>
 <!-- Permet de donner un nom à la page -->
 
-
-<!-- afin de montrer la relation one to many (code belongs_to document et document has_many codes) génerée par la clef étrangere créée lors de la migration -->
-
 <article>
 	<div class="jumbotron">
 		<div class="row">
@@ -18,7 +15,11 @@
 			</div>
 	</div>
 	<hr>
-	<p>Ci-dessous les différents codes générés pour ce documents.</p>
+	<p>Ci-dessous les différents codes générés pour ce document.</p>
+
+	<div class="btn btn-success">
+  	<%= link_to "Créer un nouveau code",new_admin_code_path %>
+  	</div>
 
 <div class="jumbotron">
 	<div class="row">

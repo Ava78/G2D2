@@ -19,11 +19,6 @@
   </ul>
 
 
-  <ul class="inline-list">
-    <li class="active"><%= link_to "Ajouter un document", new_admin_document_path%></li>
-  </ul>
-
-
 
 <!--Partie de droite !! -->
   <div class="nav navbar-nav navbar-right">
@@ -32,7 +27,6 @@
         <li><%=link_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
       <% else %>
         <li><%=link_to "Se Connecter", new_user_session_path%></li>
-        <li><%=link_to "S'inscrire", new_user_registration_path%></li>
       <% end %>      
     </ul>    
   </div>

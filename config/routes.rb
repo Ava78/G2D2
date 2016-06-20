@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-    root to: 'documents#index'
+    root to: 'codes#index'
   
   
   # Création de la page Documents pour montrer les différents documents enregistrés en base de données
@@ -21,8 +21,6 @@ Rails.application.routes.draw do
   # Idem Pour afficher le code 
   get 'codes/:slug' => 'codes#show', as: :code
 
-  get '/societes' => 'societes#show'
-
   # Pour devise
   devise_for :users
 
@@ -36,7 +34,7 @@ Rails.application.routes.draw do
        
     resources :documents
     resources :codes
-    resources :societes
+ 
 
   
   end

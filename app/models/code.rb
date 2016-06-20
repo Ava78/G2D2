@@ -2,7 +2,7 @@ class Code < ActiveRecord::Base
 	before_save :set_slug
 	#action avant enregistrement : aide pour retrouver LE code
 	belongs_to :document
-	belongs_to :societe
+	
 
 	
 	attr_accessor :image_file_name
@@ -12,10 +12,8 @@ class Code < ActiveRecord::Base
 	# la taille de chaque image est bloquée à 200 x 200 grâce au # après la taille
 
 	# concerne Paperclip et Image Magick pour affichage des vignettes et images 
-	has_attached_file :image, styles: { medium: "200x200#", thumb: "150x150>" }, default_url: "/images/:style/missing.png"
+	has_attached_file :image, styles: { medium: "200x200#", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
-	validates_attachment_file_name :image, :matches => [/png\Z/, /jpe?g\Z/, /gif\Z/]
-
 
 	private
 		def set_slug

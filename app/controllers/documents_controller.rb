@@ -10,7 +10,7 @@ class DocumentsController < ApplicationController
     #que son slug. En cas de cours non-existant --> redirigé sur page d'accueil
   	@document = Document.find_by(slug: params[:slug])
   	if @document.nil?
-      flash[:notice] = "Le document demandé n'existe pas. Contactez le service GED pour demander l'insertion."
+      flash[:none] = "Le document demandé n'existe pas. Si vous souhaitez son insertion, contactez le service GED."
   		redirect_to root_path
   	end
   end
